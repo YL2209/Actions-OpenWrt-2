@@ -16,13 +16,3 @@
 git clone https://github.com/EOYOHOO/UA2F.git package/UA2F
 git clone https://github.com/EOYOHOO/rkp-ipid.git package/rkp-ipid
 git clone https://github.com/lucikap/Brukamen.git package/Brukamen
-
-#删除原默认主题
-rm -rf package/lean/luci-theme-bootstrap
-rm -rf package/lean/luci-theme-material
-rm -rf package/lean/luci-theme-netgear
-#取消原主题luci-theme-bootstrap为默认主题
-sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
-
-# 修改 argon 为默认主题,可根据你喜欢的修改成其他的（不选择那些会自动改变为默认主题的主题才有效果）
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
