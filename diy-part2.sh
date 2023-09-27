@@ -16,3 +16,8 @@
 git clone https://github.com/EOYOHOO/UA2F.git package/UA2F
 git clone https://github.com/EOYOHOO/rkp-ipid.git package/rkp-ipid
 git clone https://github.com/lucikap/Brukamen.git package/Brukamen
+
+#删除原默认主题
+rm -rf package/lean/luci-theme-bootstrap
+rm -rf package/lean/luci-theme-material
+rm -rf package/lean/luci-theme-netgear
